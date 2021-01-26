@@ -1,0 +1,31 @@
+.container-button {
+  display: flex;
+  justify-content: center;
+
+  & > li:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+.button-filter {
+  padding: 6px 22px;
+  color: $title-color;
+  border-color: $secondary-bgcolor;
+  border-radius: 4px;
+  border-width: 0;
+  border-style: none;
+  background-color: $secondary-bgcolor;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  transition: color $time, background-color $time;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white-color;
+  }
+}
