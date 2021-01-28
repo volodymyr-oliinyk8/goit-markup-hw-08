@@ -54,6 +54,7 @@
   }
   @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);
+
     &:not(:nth-last-child(-n + 2)) {
       margin-bottom: 0;
     }

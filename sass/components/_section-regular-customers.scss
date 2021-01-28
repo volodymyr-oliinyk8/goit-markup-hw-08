@@ -1,16 +1,37 @@
 .regular-customers {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   & h2 {
     font-weight: 700;
-    font-size: 36px;
     line-height: 1.17;
     text-align: center;
+    @media screen and (max-width: 1199px) {
+      font-size: 28px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+    }
   }
 }
 .regular-customers-list {
-  display: flex;
-  margin-top: 50px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-top: 50px;
+  }
 }
 .regular-customers-link {
   display: inline-flex;
@@ -30,9 +51,20 @@
     fill: $accent-color;
   }
 }
-.regular-customers-item:not(:last-child) {
-  margin-right: 30px;
+.regular-customers-item {
+  @media screen and (max-width: 767px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 2 * 30px) / 3);
+  }
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
+
 .regular-customers-icon {
   --color: currentColor;
   &.icon-1 {
