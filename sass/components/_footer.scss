@@ -2,8 +2,17 @@ footer {
   background-color: #2f303a;
 }
 .footer-bottom {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @media screen and (max-width: 767px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 48px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+  }
 }
 .logo-footer {
   color: $white-color;
@@ -16,6 +25,14 @@ address {
   font-size: 14px;
   line-height: 1.71;
 }
+.address-list li:not(:last-child) {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 8px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
 /* цвет ссылок телефон+почта */
 
 .address-link {
@@ -25,10 +42,42 @@ address {
   }
 }
 .fotter-container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
 }
+.footer-contacts {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding-left: 65px;
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-left: 0;
+    text-align: left;
+    align-items: baseline;
+  }
+}
+.footer-address {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 165px;
+    margin-top: 60px;
+    margin-bottom: 72px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
 .social-list-fotter {
   font-weight: 700;
   font-size: 14px;
@@ -39,10 +88,26 @@ address {
   & > p {
     margin: 0;
   }
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 83px;
+    & > p {
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+  }
 }
 .social-item-footer {
   display: flex;
   margin-top: 20px;
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
 }
 .list-link-footer {
   display: inline-flex;
@@ -76,7 +141,7 @@ address {
   height: 20px;
 }
 .footer-form {
-  & > p {
+  & p {
     margin-top: 0;
     margin-bottom: 20px;
     margin-left: 0;
@@ -87,12 +152,11 @@ address {
     text-transform: uppercase;
     color: $white-color;
   }
-  & > input {
+  & input {
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 16px;
     padding-right: 16px;
-    width: 358px;
     height: 50px;
     background-color: #2f303a;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -101,9 +165,47 @@ address {
     border-radius: 4px;
     color: $white-color;
   }
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+    & p {
+      text-align: center;
+    }
+    & input {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    & p {
+      text-align: center;
+    }
+    & input {
+      display: block;
+      width: 450px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    display: block;
+    & input {
+      width: 358px;
+      margin-bottom: 0;
+      margin-right: 12px;
+    }
+    & p {
+      text-align: left;
+    }
+    margin-left: auto;
+  }
+}
+.form-elements {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 .footer-button {
-  margin-left: 12px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 29px;
@@ -119,6 +221,11 @@ address {
   line-height: 1.875;
   letter-spacing: 0.06em;
   color: $white-color;
+  @media screen and (max-width: 1199px) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .footer-form-send {
   margin-left: 10px;
