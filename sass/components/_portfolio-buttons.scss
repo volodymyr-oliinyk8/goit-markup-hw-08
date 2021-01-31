@@ -1,9 +1,25 @@
 .container-button {
   display: flex;
-  justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 
   & > li:not(:last-child) {
     margin-right: 8px;
+  }
+  @media screen and (max-width: 767px) {
+    & > li:nth-child(1) {
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    & > li:nth-child(1) {
+      margin-bottom: 0;
+    }
   }
 }
 .button-filter {

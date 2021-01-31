@@ -1,25 +1,59 @@
+.main-portfolio {
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 94px;
+    margin-bottom: 94px;
+  }
+}
+
 .work-set {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 56px;
 
   & img {
     display: block;
   }
+  @media screen and (max-width: 767px) {
+    margin-top: 40px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 50px;
+  }
 }
 .work-item {
-  width: 370px;
-  height: 404px;
-
   & a {
     display: block;
   }
-
-  &:not(:nth-child(3n)) {
+  @media screen and (max-width: 767px) {
+    margin-right: 0;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  &:not(:nth-child(2n)) {
     margin-right: 30px;
   }
-  &:not(:nth-last-child(-n + 3)) {
-    margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 2 * 30px) / 3);
+    &:not(:nth-child(2n)) {
+      margin-right: 0;
+    }
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
+    &:not(:nth-last-child(-n + 3)) {
+      margin-bottom: 30px;
+    }
   }
 
   & a:hover .work-secondary {
@@ -47,7 +81,11 @@
 .work-img {
   position: relative;
   overflow: hidden;
+  & img {
+    width: 100%;
+  }
 }
+
 .work-secondary {
   position: absolute;
   overflow: hidden;

@@ -15,7 +15,7 @@
     <header class="header-page portfolio">
       <div class="container header-item">
         <a class="logo-link" href="./index.html"
-          >Web <samp class="logo-header">Studio</samp></a
+          >Web<samp class="logo-header">Studio</samp></a
         >
         <nav class="nav-main">
           <ul class="site-nav">
@@ -71,12 +71,7 @@
             <li class="work-item">
               <a href="" class="work-item-link">
                 <div class="work-img">
-                  <img
-                    src="./images/photo-examples/1.jpg"
-                    alt="Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <img src="./images/photo-examples/1.jpg" alt="Технокряк" />
                   <p class="work-secondary">
                     Технокряк это современная площадка распространения
                     коронавируса. Компании используют эту платформу для
@@ -263,69 +258,73 @@
     </main>
     <footer class="footer-bottom">
       <div class="container fotter-container">
-        <div>
-          <a class="logo-link" href="./index.html"
-            >Web <span class="logo-footer">Studio</span></a
-          >
-          <!--адресс, телефон, почта-->
-          <address>
-            <ul>
-              <li class="address-city">г. Киев, пр-т Леси Украинки, 26</li>
-              <li>
-                <a class="address-link footer" href="mailto:info@example.com"
-                  >info@example.com</a
-                >
+        <div class="footer-contacts">
+          <div class="footer-address">
+            <a class="logo-link" href="./index.html"
+              >Web<span class="logo-footer">Studio</span></a
+            >
+            <!--адресс, телефон, почта-->
+            <address>
+              <ul class="address-list">
+                <li class="address-city">г. Киев, пр-т Леси Украинки, 26</li>
+                <li>
+                  <a class="address-link footer" href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li>
+                  <a class="address-link footer" href="tel:380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="social-list-fotter">
+            <p>присоединяйтесь</p>
+            <ul class="social-item-footer">
+              <li class="link-item-footer">
+                <a class="link-footer" href="#">
+                  <svg class="link-icon-footer">
+                    <use href="./images/icon/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li>
-                <a class="address-link footer" href="tel:380991111111"
-                  >+38 099 111 11 11</a
-                >
+              <li class="link-item-footer">
+                <a class="link-footer" href="#">
+                  <svg class="link-icon-footer">
+                    <use href="./images/icon/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="link-item-footer">
+                <a class="link-footer" href="#">
+                  <svg class="link-icon-footer">
+                    <use href="./images/icon/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="link-item-footer">
+                <a class="link-footer" href="#">
+                  <svg class="link-icon-footer">
+                    <use href="./images/icon/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="social-list-fotter">
-          <p>присоединяйтесь</p>
-          <ul class="social-item-footer">
-            <li class="link-item-footer">
-              <a class="link-footer" href="#">
-                <svg class="link-icon-footer">
-                  <use href="./images/icon/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="link-item-footer">
-              <a class="link-footer" href="#">
-                <svg class="link-icon-footer">
-                  <use href="./images/icon/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="link-item-footer">
-              <a class="link-footer" href="#">
-                <svg class="link-icon-footer">
-                  <use href="./images/icon/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="link-item-footer">
-              <a class="link-footer" href="#">
-                <svg class="link-icon-footer">
-                  <use href="./images/icon/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <form class="footer-form" action="mailto:info@devstudio.com">
           <p>Подпишитесь на рассылку</p>
-          <input type="email" placeholder="E-mail" />
-          <button class="footer-button" type="submit">
-            Подписаться
-            <svg class="footer-form-send">
-              <use href="./images/icon/sprite.svg#icon-send"></use>
-            </svg>
-          </button>
+          <div class="form-elements">
+            <input type="email" placeholder="E-mail" />
+            <button class="footer-button" type="submit">
+              Подписаться
+              <svg class="footer-form-send">
+                <use href="./images/icon/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
         </form>
       </div>
     </footer>
