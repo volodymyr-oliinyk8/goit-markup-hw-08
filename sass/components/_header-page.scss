@@ -7,10 +7,38 @@
     align-items: center;
   }
 }
+.contacts-menu {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  & .icon-close {
+    display: none;
+  }
+  &.is-open .icon-close {
+    display: block;
+  }
+  &.is-open .icon-menu {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-container {
+  // @media screen and (min-width: 768px) {
+  display: none;
+  // }
+}
 .header-item {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     padding-top: 16px;
     padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   @media screen and (min-width: 768px) {
     padding-top: 0;
