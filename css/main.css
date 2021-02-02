@@ -328,23 +328,6 @@ a {
   color: #757575;
 }
 
-@media screen and (max-width: 767px) {
-  .nav-main {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .nav-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
 .contacts-menu {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -353,6 +336,9 @@ a {
   padding: 0;
   border: none;
   background-color: transparent;
+  fill: #212121;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-menu .icon-close {
@@ -361,6 +347,7 @@ a {
 
 .contacts-menu.is-open .icon-close {
   display: block;
+  z-index: 100;
 }
 
 .contacts-menu.is-open .icon-menu {
@@ -373,8 +360,45 @@ a {
   }
 }
 
-.menu-container {
-  display: none;
+@media screen and (max-width: 767px) {
+  .contacts-menu {
+    z-index: 100;
+  }
+  .contacts-menu:hover, .contacts-menu:focus {
+    fill: #2196f3;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    width: 480px;
+    height: 796px;
+    background-color: #ffffff;
+    top: -16px;
+    left: -15px;
+    padding-top: 48px;
+    padding-left: 40px;
+  }
+  .menu-container.is-open {
+    display: block;
+    z-index: 99;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    width: 768px;
+    margin-left: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    width: 1200px;
+    margin-left: 93px;
+  }
 }
 
 .header-item {
@@ -429,26 +453,56 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.site-nav {
+@media screen and (max-width: 767px) {
+  .header-nav {
+    position: relative;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-nav {
+    width: 100%;
+  }
+}
+
+.nav-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-main {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-main {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .site-nav {
-    margin-left: 88px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .site-nav {
-    margin-left: 93px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -458,6 +512,15 @@ a {
 
 .nav-item {
   position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-item {
+    display: block;
+  }
+  .nav-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 
 .nav-link {
@@ -491,8 +554,32 @@ a {
 }
 
 @media screen and (max-width: 767px) {
-  .contacts-list {
+  .nav-link {
+    padding: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 40px;
+    line-height: 1.18;
+  }
+  .nav-link:focus {
+    color: #2196f3;
+  }
+  .nav-link.current::before {
     display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-list {
+    margin-top: 302px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 
@@ -501,6 +588,9 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin-left: auto;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -523,6 +613,26 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-item {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-item + .contacts-item {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    margin-bottom: 32px;
+  }
+  .contacts-item + .contacts-item .nav-contacts {
+    color: #2196f3;
   }
 }
 
@@ -580,11 +690,48 @@ a {
   fill: currentColor;
 }
 
+@media screen and (max-width: 767px) {
+  .nav-contacts-envelope {
+    display: none;
+  }
+}
+
 .nav-contacts-smartphone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
   fill: currentColor;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-contacts-smartphone {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 64px;
+  }
+  .nav-social > li:not(:last-child) {
+    margin-right: 20px;
+  }
+  .nav-social .nav-social-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-social {
+    display: none;
+  }
 }
 
 .logo-link {
@@ -613,6 +760,9 @@ a {
 }
 
 .hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   color: #ffffff;
   background-color: #2f303a;
   text-align: center;
@@ -644,7 +794,7 @@ a {
 .container-hero {
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  max-width: 1600px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bg-hero.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero.jpg);
   background-repeat: no-repeat;
@@ -1215,6 +1365,9 @@ a {
 }
 
 footer {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #2f303a;
 }
 
