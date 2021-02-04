@@ -24,6 +24,7 @@
     &:hover,
     &:focus {
       fill: $accent-color;
+      cursor: pointer;
     }
   }
 }
@@ -113,9 +114,6 @@
     &:not(:last-child) {
       margin-bottom: 32px;
     }
-    // &:focus {
-    //   color: $accent-color;
-    // }
   }
 }
 .nav-link {
@@ -216,15 +214,6 @@
   &:focus {
     color: $accent-color;
     fill: $accent-color;
-  }
-  @media screen and (max-width: 767px) {
-    // &:nth-child(1n) {
-    //   font-weight: 500;
-    //   font-size: 34px;
-    //   line-height: 1.18;
-    //   letter-spacing: 0.02em;
-    //   color: $accent-color;
-    // }
   }
   @media screen and (min-width: 768px) {
     font-size: 12px;
